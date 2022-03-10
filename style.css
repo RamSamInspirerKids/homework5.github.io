@@ -1,142 +1,152 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
-* {
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  min-height: 100vh;
-  transition: 0.5s;
-  background-color: crimson;
-  margin-top: -30px;
-}
-.navigation {
-  position: relative;
-  width: 350px;
-  height: 70px;
-  border-radius: 40px;
-  background-color: #fff;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
 }
 
-.navigation ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-}
-.navigation ul li {
-  position: relative;
-  list-style: none;
-  width: 70px;
-  height: 70px;
+.menu {
+  position: fixed;
   z-index: 1;
-}
-.navigation ul li a {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-  color: #333;
-  font-weight: 500;
-}
-.navigation ul li a .icon {
-  position: relative;
-  display: block;
-  line-height: 75px;
-  text-align: center;
-  transition: 0.5s;
-}
-.navigation ul li.active a .icon {
-  color: #fff;
-}
-.navigation ul li a .icon i {
-  font-size: 20px;
-}
-.navigation ul li a .title {
-  position: absolute;
-  top: -70px;
-  left: 50%;
-  transform: translate(-50%, 15%);
-  width: auto;
-  background: #fff;
-  padding: 5px 10px;
-  border-radius: 7px;
-  transition: 0.5s;
-  opacity: 0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  visibility: hidden;
-}
-.navigation ul li:hover a .title {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, 50%);
-}
-.navigation ul li a .title::before {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  bottom: -8px;
-  left: 48%;
-  transform: rotate(45deg) translateX(-50%);
-  border-radius: 2px;
-}
-.navigation ul .indicator {
-  position: absolute;
+  top: 0;
+  bottom: 0;
   left: 0;
-  width: 70px;
-  height: 70px;
-  transition: all 0.5s;
-}
-.navigation ul .indicator::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #333;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: 0.5s;
-}
-.navigation ul li:nth-child(1).active ~ .indicator {
-  transform: translateX(calc(70px * 0));
-}
-.navigation ul li:nth-child(2).active ~ .indicator {
-  transform: translateX(calc(70px * 1));
-}
-.navigation ul li:nth-child(3).active ~ .indicator {
-  transform: translateX(calc(70px * 2));
-}
-.navigation ul li:nth-child(4).active ~ .indicator {
-  transform: translateX(calc(70px * 3));
-}
-.navigation ul li:nth-child(5).active ~ .indicator {
-  transform: translateX(calc(70px * 4));
+  width: 10%;
+  padding: 0;
+  text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+ }
+
+a {
+  text-decoration: none;
 }
 
-.navigation ul li:nth-child(1).active ~ .indicator::before {
-  background-color: crimson;
+
+.menu i {
+  font-size: 32px;
 }
-.navigation ul li:nth-child(2).active ~ .indicator::before {
-  background-color: #3c40c6;
+
+.menu a {
+  margin: 30px 0;
 }
-.navigation ul li:nth-child(3).active ~ .indicator::before {
-  background-color: #05c46b;
+
+.page {
+  position: absolute;
+  height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
-.navigation ul li:nth-child(4).active ~ .indicator::before {
-  background-color: #0fbcf9;
+
+#p1 {
+	width: 100%;
+	background: darkslateblue;
+	left: 0;
 }
-.navigation ul li:nth-child(5).active ~ .indicator::before {
-  background-color: #ffa801;
+
+#p2 {
+	background: tomato;
 }
+
+#p3 {
+	background: deeppink;
+}
+
+#p4 {
+	background: rebeccapurple;
+}
+
+#p2, #p3, #p4 {
+	width: 90%;
+  left: 10%;
+	transform: translateX(190%);
+}
+
+.menu a {
+  transition: all .5s ease-out;
+	color: #fff;
+}
+
+.menu a:hover {
+  opacity: 0.5;
+}
+
+.page {
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+.page i {
+	font-size: 80px;
+}
+
+.page h2 {
+	font-size: 36px;
+	line-height: 2;
+}
+
+.page span {
+	font-size: 17px;
+}
+
+.page {
+	transition: all .6s cubic-bezier(.5, .2, .2, 1.1); 
+}
+
+#t2:target #p2,
+#t3:target #p3,
+#t4:target #p4 {
+  transform: translateX(0%);
+  transition-delay: .4s !important;
+}
+
+#t2:target #p1, 
+#t3:target #p1,
+#t4:target #p1 {
+  background: black;
+	filter: blur(3px)
+}
+
+#t2:target .menu a,
+#t3:target .menu a,
+#t4:target .menu a {
+  transform: scale(.6);
+  transition-delay: .25s;
+}
+
+#t2:target .menu .two,
+#t3:target .menu .three,
+#t4:target .menu .four {
+  transform: scale(1.2);
+}
+
+.page span a {
+  color: yellow;
+  transition: all 250ms ease-out;
+}
+
+.page span a:hover {
+  color: #FFF;
+}
+
+.page .wrap {
+	width: 50%;
+  transform: translateX(200%);
+  transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+}
+
+.page#p1 .wrap {
+  transform: translateX(0%);
+}
+
+#t2:target .page#p2 .wrap,
+#t3:target .page#p3 .wrap,
+#t4:target .page#p4 .wrap {
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
