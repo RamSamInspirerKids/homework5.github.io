@@ -204,8 +204,8 @@ html{
 }
 .card{
   cursor: pointer;
-  width: 340px;
-  height: 480px;
+  width: 500px;
+  height: 600px;
   bottom: 20%;
 }
 .front,.back{
@@ -231,6 +231,9 @@ html{
   text-align: center;
   width: 100%;
 }
+.back-content span{
+  font-size: 40px;
+}
 .sm{
   margin: 20px 0;
 }
@@ -241,7 +244,7 @@ html{
   justify-content: center;
   align-items: center;
   color: #2c3e50;
-  font-size: 18px;
+  font-size: 40px ;
   transition: 0.4s;
   border-radius: 50%
 }
