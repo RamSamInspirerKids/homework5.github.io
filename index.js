@@ -18,11 +18,11 @@ const questions = [
     },
 
     {
-        question: "When was the first battery created?",
+        question: "When was the first battery invented?",
         optionA: "1916",
         optionB: "1778",
         optionC: "1834",
-        optionD: "1798",
+        optionD: "1800",
         correctOption: "optionD"
     },
 
@@ -82,21 +82,21 @@ const questions = [
 
     {
         question: "What Contains Energy ?",
-        optionA: "Electron",
-        optionB: "Lithium",
-        optionC: "Cathode",
-        optionD: "Anode",
-        correctOption: "optionA"
+        optionA: "Cathode",
+        optionB: "Anode",
+        optionC: "Electrons",
+        optionD: "Lithium",
+        correctOption: "optionC"
     }
-
 
 ]
 
 
-let shuffledQuestions = [] //empty array to hold shuffled selected questions
+let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
 
 function handleQuestions() { 
     //function to shuffle and push 10 questions to shuffledQuestions array
+//app would be dealing with 10questions per session
     while (shuffledQuestions.length <= 9) {
         const random = questions[Math.floor(Math.random() * questions.length)]
         if (!shuffledQuestions.includes(random)) {
@@ -106,12 +106,13 @@ function handleQuestions() {
 }
 
 
-let questionNumber = 1
-let playerScore = 0  
-let wrongAttempt = 0 
-let indexNumber = 0
+let questionNumber = 1 //holds the current question number
+let playerScore = 0  //holds the player score
+let wrongAttempt = 0 //amount of wrong answers picked by player
+let indexNumber = 0 //will be used in displaying next question
 
 // function for displaying next question in the array to dom
+//also handles displaying players and quiz information to dom
 function NextQuestion(index) {
     handleQuestions()
     const currentQuestion = shuffledQuestions[index]
@@ -138,7 +139,7 @@ function checkForAnswer() {
             correctOption = option.labels[0].id
         }
     })
-   
+
     //checking to make sure a radio input has been checked or an option being chosen
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
         document.getElementById('option-modal').style.display = "flex"
@@ -148,8 +149,8 @@ function checkForAnswer() {
     options.forEach((option) => {
         if (option.checked === true && option.value === currentQuestionAnswer) {
             document.getElementById(correctOption).style.backgroundColor = "green"
-            playerScore++
-            indexNumber++
+            playerScore++ //adding to player's score
+            indexNumber++ //adding 1 to index so has to display next question..
             //set to delay question number till when next question loads
             setTimeout(() => {
                 questionNumber++
@@ -160,7 +161,7 @@ function checkForAnswer() {
             const wrongLabelId = option.labels[0].id
             document.getElementById(wrongLabelId).style.backgroundColor = "red"
             document.getElementById(correctOption).style.backgroundColor = "green"
-            wrongAttempt++
+            wrongAttempt++ //adds 1 to wrong attempts 
             indexNumber++
             //set to delay question number till when next question loads
             setTimeout(() => {
@@ -174,15 +175,16 @@ function checkForAnswer() {
 
 //called when the next button is called
 function handleNextQuestion() {
-    checkForAnswer()
+    checkForAnswer() //check if player picked right or wrong option
     unCheckRadioButtons()
-    //delays next question displaying for a second
+    //delays next question displaying for a second just for some effects so questions don't rush in on player
     setTimeout(() => {
         if (indexNumber <= 9) {
+//displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
             NextQuestion(indexNumber)
         }
         else {
-            handleEndGame()
+            handleEndGame()//ends game if index number greater than 9 meaning we're already at the 10th question
         }
         resetOptionBackground()
     }, 1000);
@@ -234,7 +236,7 @@ function handleEndGame() {
 
 }
 
-//closes score modal and resets game
+//closes score modal, resets game and reshuffles questions
 function closeScoreModal() {
     questionNumber = 1
     playerScore = 0
