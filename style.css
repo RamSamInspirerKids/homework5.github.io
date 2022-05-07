@@ -180,8 +180,8 @@ html{
 .bubble{
   position: absolute;
   display: block;
-  height: 500px;
-  width: 600px;
+  height: 410px;
+  width: 500px;
   margin-left: 100px; 
   background-color: rgb(94, 94, 94);
   padding: 20px;
