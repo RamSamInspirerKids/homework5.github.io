@@ -1,10 +1,10 @@
 const questions = [
     {
-        question: "How many metals are used in a battery ?",
-        optionA: "6",
-        optionB: "8",
-        optionC: "5",
-        optionD: "7",
+        question: "How many elements are in the Periodic Table ?",
+        optionA: "188",
+        optionB: "88",
+        optionC: "118",
+        optionD: "181",
         correctOption: "optionC"
     },
 
