@@ -9,7 +9,8 @@ const questions = [
     },
 
     {
-        question: "Who Invented Batteries ?",
+        question: "When was the Peridoic Table created ?",
+        question: "When was the Peridoic Table created ?",
         optionA: "Alessandro Volta",
         optionB: "Nikola Tesla",
         optionC: "Albert Einstein",
