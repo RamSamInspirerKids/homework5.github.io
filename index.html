@@ -1,56 +1,106 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About The Periodic Table</title>
-<script src="https://kit.fontawesome.com/a5b558675f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section></section>
-     <div class="shell">
-       <ul class="col">
-        <li class="list">
-          <a href="index.html">
-            <span class="icon spec"><i class="fa-solid fa-house"></i></span>
-            <span class="title">Home</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="how.html">
-            <span class="icon"><i class="fa-brands fa-elementor"></i></span>
-            <span class="title">Elements</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="parts.html">
-            <span class="icon"><i class="fa-solid fa-layer-group"></i></span>
-            <span class="title">Groups</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="extra.html">
-            <span class="icon"><i class="fa-solid fa-file-lines"></i></span>
-            <span class="title">Quiz</span>
-          </a>
-        </li>
-         </ul>
-     </div>
-     <div class="wrapper">
-        <div class="swipe">
-          <span class="h1">All About The Periodic Table</span>
-        </div>
-        <div class="swipe swipe--delay">
-          <span class="h3">BY Samhith</span>
-        </div>
-     </div>
-     <div class="bubble">
-       <div class="input">
-         <p>
-          The Periodic Table is a Tabular display of Chemical Elements. The Periodic Table was created in 1869 by Dmitri Mendeleev a Russian chemist and inventor. In this presintation I will be explaining you the elements and groups in the Periodic Table. Also There will be a Quiz at the end. 
-         </p>
-       </div>
-     </div>
+    <title>TacoMan's Taco's</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/e4384f87ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+ <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand page-scroll" href="#page-top"><i class="fa-solid fa-house"></i>Home</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-nav">
+                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                  <li class="hidden">
+                      <a class="page-scroll" href="#page-top"></a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#about">About</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#services">Taste</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#contact">Order</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <!-- Intro Section -->
+  <header>
+    <div class="content">
+      <h1>TACO<span>MAN'S</span>TACOS</h1>
+              <h1>TacoMan's Tacos will be coming soon</h1>
+      <h2>COMING SOON</h2>
+      <div class="countdown">00 : 00 : 00 : 00</div>
+    </div>
+  </header>
+    <!-- About Section -->
+  <section id="about" class="about-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1>About Section</h1>
+                  <h2>TacoMan's Tacos is a Taco selling franchise founded by Vincent Whitaker and Evan Bursill in Sydney, Australia.<br/>Vincent has to get all of the credit as he had thought of this amazing idea and Evan has supported him. They have a huge amount of supporter backing this franchise as it is a break through idea. TacoMan's Tacos will release very shortly.<span class="never">(aka NEVER!)</span>
+                  </h2>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1>Taste Section</h1>
+                  <h2>The taste of TacoMan's Tacos's exeptional ticking all the boxes that a spectacular taco needs in 2022 and beyond.<br/>It has been number 1 on Trending across all news outlets and social media.<br/>Their prices are killing it as it blows peoples minds.<br/>The rating has exeded 5 stars by everyone who has tried it.<br/>People have waited for hours in lines and become out of stock within seconds.<br/>We are working closly with our partners, funders and providers to ramp up production of the Tacos.</h2>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1>Order Section</h1>
+                  <h2>Your can order you TacoMan's Taco's soon by clicking the link below<span class="never">PLEASE CLICK IT VIEWERS IF YOU ARE LOYAL SUPPORTERS OF TACOMAN'S TACOS</span></h2>
+                  <a href="https://www.youtube.com/watch?v=Yk8ejnCdDaw&t=2s">ORDER NOW PLS</a>
+                </div>
+          </div>
+      </div>
+  </section>
 </body>
 </html>
